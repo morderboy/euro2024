@@ -1,0 +1,57 @@
+@media print {
+    html, body {
+        width: 400mm;
+        height: 400mm;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        zoom: 90%;
+    }  
+
+    body {
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        transform-origin: left top;
+    }
+
+    h3 {
+        margin: 0;
+        padding: 0;
+    }
+
+    button {
+        display: none !important;
+    }
+
+    #TableA, #TableB, #TableC, #TableD, #TableE, #TableF {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .group {
+        display: flex; /* Используем flexbox */
+        flex-direction: column; /* Устанавливаем направление столбцом */
+    }
+
+    .group > * {
+        margin-top: 0; /* Убираем верхний отступ у дочерних элементов */
+        margin-bottom: 0; /* Убираем нижний отступ у дочерних элементов */
+    }
+
+    .new-page {
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        zoom: 45%;
+    }
+
+    .final-table-wrapper {
+        page-break-inside: avoid;
+        page-break-after: always;
+    }
+}
